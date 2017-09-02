@@ -1,0 +1,19 @@
+{
+    "name": "doshirak/bot",
+    "authors": [
+        {
+            "name": "Maxim Ten",
+            "email": "maximten94@gmail.com"
+        }
+    ],
+    "require": {
+        "unreal4u/telegram-api": "@dev",
+        "doctrine/orm": "^2.5",
+        "monolog/monolog": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
