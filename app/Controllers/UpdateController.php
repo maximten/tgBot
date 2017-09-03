@@ -30,13 +30,12 @@ class UpdateController {
                         $updateRecord->update_id = $update->update_id;
                         $updateRecord->data = (array) $update;
                         $entityManager->persist($updateRecord);
-                        $newUpdates[] = $updateRecord; 
-                        $entityManager->flush();
                         $LOG->info("get update: {$update->update_id}");
                         $messageController = new MessageController();
                         $messageController->handle($updateRecord);
                     }
                 }
+                $entityManager->flush();
             },
             function (Exception $e) {
                 global $LOG;

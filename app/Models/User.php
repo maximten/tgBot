@@ -11,4 +11,12 @@ class User {
     public $id;
     /** @Column(type="json_array") **/
     public $data;
+    /** @Column(type="string") **/
+    public $state;
+    /** @Column(type="string", nullable=true) **/
+    public $timezone;
+    /**
+     * @OneToMany(targetEntity="Reminder", mappedBy="user")
+     */    
+     public $reminders;
 }

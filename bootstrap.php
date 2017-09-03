@@ -1,12 +1,19 @@
 <?php
 require (__DIR__ . '/vendor/autoload.php');
+require (__DIR__ . '/timezones.php');
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+date_default_timezone_set('Asia/Krasnoyarsk');
+
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Monolog\Logger;
+
+function write($value) {
+    fwrite(STDOUT, print_r($value, true) . "\n");
+}
 
 global $CONFIG, $LOG, $entityManager;
 
