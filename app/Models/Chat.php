@@ -3,12 +3,12 @@
 namespace App\Models;
 
 /**
- * @Entity @Table(name="updates")
+ * @Entity @Table(name="chats")
  * @Entity @HasLifecycleCallbacks
  **/
-class Update {
+class Chat {
     /** @Id @Column(type="integer") **/
-    public $update_id;
+    public $id;
     /** @Column(type="json_array") **/
     public $data;
 }

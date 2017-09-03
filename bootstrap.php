@@ -8,7 +8,7 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Monolog\Logger;
 
-global $CONFIG, $LOG;
+global $CONFIG, $LOG, $entityManager;
 
 $LOG = new Logger('main');
 
